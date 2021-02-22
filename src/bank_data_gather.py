@@ -11,6 +11,15 @@ def convert_bank_data_to_float(data_lst):
         lst.append(i)
     return lst
 
+def autolabel(rects):
+   
+    for rect in rects:
+        height = rect.get_height()
+        ax.annotate('{}'.format(height),
+                    xy=(rect.get_x() + rect.get_width() / 2, height),
+                    xytext=(0, 3),  # 3 points vertical offset
+                    textcoords="offset points",
+                    ha='center', va='bottom')
 
 if __name__ == "__main__":
     tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
@@ -39,17 +48,18 @@ if __name__ == "__main__":
     netloan_losses_per_average_loans_dec2017 =tcbi.iloc[571]
 
 
-    #graph
+    
+    
+#graph total assets
     bank_dates = ['dec 2017', 'dec 2018', 'sept 2019','dec 2019', 'sept 2020' ]
-# bank_dates = ['sept 2020', 'dec 2019', 'sept 2019', 'dec 2018', 'dec 2017']
+    # bank_dates = ['sept 2020', 'dec 2019', 'sept 2019', 'dec 2018', 'dec 2017']
 
     assets_total_lst = [assets_total_dec2017,assets_total_dec2018,assets_total_sept2019,assets_total_dec2019,assets_total_sept2020]
-# assets_total_lst = [assets_total_sept2020,assets_total_dec2019,assets_total_sept2019,assets_total_dec2018,assets_total_dec2017]
     converted_assets_total_lst = (convert_bank_data_to_float(assets_total_lst))
-    fig, ax= plt.subplots(1, figsize=(12,6))
+    fig, ax= plt.subplots(1, figsize=(8,5), dpi = 200)
     ax.bar(bank_dates, converted_assets_total_lst)
     ax.set_title ('Total Assets')
-    # yticks = [500000000]
+  
     ax.ticklabel_format(axis = 'y', style = 'plain')
     fig.tight_layout()
 
