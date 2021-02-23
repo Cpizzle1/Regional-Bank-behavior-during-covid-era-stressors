@@ -5,7 +5,7 @@ import scipy.stats as stats
 from bank_data_gather import *
 
 tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
-def net_income_func(dataframe, Bank_name = 'Bank'):
+def assets_by_percent(dataframe, Bank_name = 'Bank'):
     percent_asset_real_estate_loan_sept2020 = tcbi.iloc[2516]
     percent_asset_commercial_industrial_loan_sept2020 = tcbi.iloc[2531]
     percent_asset_loan_to_individuals_sept2020 = tcbi.iloc[2546]
@@ -58,7 +58,7 @@ def net_income_func(dataframe, Bank_name = 'Bank'):
 
     plt.show()
 
-print(net_income_func(tcbi, 'TCBI'))
+print(assets_by_percent(tcbi, 'TCBI'))
 
 
 

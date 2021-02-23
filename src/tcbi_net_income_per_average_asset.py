@@ -44,22 +44,22 @@ ax.set_title('NET OPERATING INCOME / AVERAGE ASSETS (YTD)', Fontsize = 24)
 ax.set_xticks(x)
 ax.set_xticklabels(bank_dates)
 ax.legend()
+plt.show()
 
 
 
-def autolabel(rects):
+# def autolabel(rects):
    
-    for rect in rects:
-        height = rect.get_height()
-        ax.annotate('{}'.format(height),
-                    xy=(rect.get_x() + rect.get_width() / 2, height),
-                    xytext=(0, 3),  # 3 points vertical offset
-                    textcoords="offset points",
-                    ha='center', va='bottom')
+#     for rect in rects:
+#         height = rect.get_height()
+#         ax.annotate('{}'.format(height),
+#                     xy=(rect.get_x() + rect.get_width() / 2, height),
+#                     xytext=(0, 3),  # 3 points vertical offset
+#                     textcoords="offset points",
+#                     ha='center', va='bottom')
 
 
-autolabel(tcbi_income_per_asset_ax)
-autolabel(pg_income_per_asset_ax)
+# autolabel(tcbi_income_per_asset_ax)
+# autolabel(pg_income_per_asset_ax)
 
 # plt.savefig('TCBI_net_income_per_average_asset.png')
-plt.show()
