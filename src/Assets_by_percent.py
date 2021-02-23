@@ -42,7 +42,7 @@ pg_total_asset_catagory_by_percent_sept2020 = [peer_real_estate_total_asset_sept
 
 total_list = (convert_bank_data_to_float(total_percent_lst))
 converted_pg_total_asset_catagory_by_percent_sept2020 = (convert_bank_data_to_float(pg_total_asset_catagory_by_percent_sept2020))
-
+# = map(lambda x:x/1000, converted_pg_total_asset_catagory_by_percent_sept2020))
 
 total_percent_catagories=['Real Estate', 'Comm&Industrial', 'Individ', 'Other', 'Bank balances', 'Securities>1year','All Other']
 
@@ -62,6 +62,7 @@ ax.set_ylabel('Percent Asset')
 ax.set_title('Assets by Percentage', fontsize = 24)
 ax.set_xticks(x)
 ax.set_xticklabels(total_percent_catagories)
+
 ax.legend()
 
 autolabel(rects1)
