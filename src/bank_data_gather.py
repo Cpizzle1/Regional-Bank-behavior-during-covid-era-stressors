@@ -3,6 +3,15 @@ import numpy as np
 import matplotlib as plt
 import scipy.stats as stats
 import matplotlib.pyplot as plt
+
+def divide_1000(lst):
+    lst1 = []
+    for i in lst:
+        i = i/1000
+        i = round(i, 1)
+        lst1.append(i) 
+    return lst1
+
 def convert_bank_data_to_float(data_lst):
     
     lst = []

@@ -5,9 +5,9 @@ import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as stats
 from bank_data_gather import convert_bank_data_to_float
+# from bank_data_gather import divide_1000
 
 tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
-
 def divide_1000(lst):
     lst1 = []
     for i in lst:
@@ -15,6 +15,8 @@ def divide_1000(lst):
         i = round(i, 1)
         lst1.append(i) 
     return lst1
+
+
 
 def autolabel(rects):
     
@@ -25,6 +27,8 @@ def autolabel(rects):
                     xytext=(0, 3),  # 3 points vertical offset
                     textcoords="offset points",
                     ha='center', va='bottom')
+
+
 
 net_income_dec2017 = tcbi.iloc[1120]
 net_income_dec2018 = tcbi.iloc[1119]
@@ -41,10 +45,11 @@ net_income = [net_income_dec2017,net_income_dec2018, net_income_sept2019,net_inc
 
 converted_net_income = (divide_1000(convert_bank_data_to_float(net_income)))
 
+
 fig, ax= plt.subplots(1, figsize=(6,5),dpi = 200)
 rects1= ax.bar(bank_dates, converted_net_income)
-ax.set_title ('Net Income TTM')
-ax.set_ylabel('Millions(USD)')
+ax.set_title ('Net Income (YTD)', fontsize = 24)
+ax.set_ylabel('Millions(USD)', fontsize = 14)
 
 ax.ticklabel_format(axis = 'y', style = 'plain')
 
