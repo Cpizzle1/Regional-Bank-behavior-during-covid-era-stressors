@@ -26,14 +26,14 @@ Holding companies with reported total assets are required to file reports with t
 
 [Figure1.3]
     <div align="center">
-      <img src="images/TCBI_net_income_per_average_asset.png.png">
+      <img src="images/TCBI_net_income_per_average_asset.png">
     </div>
 
 <br>
 
 [Figure1.4]
     <div align="center">
-      <img src="CI_loans_30_89_late.png">
+      <img src="images/CI_loans_30_89_late.png">
     </div>
 
 <br>
