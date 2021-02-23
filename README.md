@@ -39,13 +39,34 @@ Holding companies with reported total assets are required to file reports with t
 <br>
 
 ## Conclusions
+It does seem that TCBI has been significantly less profitable in 2020, and their non-performing loans have grown relative to 2019, but they have also allocated a larger portion of their assets to loan loss provisions and short term highly-liquid positions.  Without a full test-suite and understanding of bank fundamentals, I believe the only thing we can say with some certainy is that TCBI is under a larger degress of financial stress than 2019.                   
+
+This analysis does have the underpinnings of a proof of concept of a quarterly analysis and vizualizations of FFIEC filings. With the code in the SRC folder, it does seem possible to get a course view of the current state of a bank relative to its previous position and potentially its peer group.
+  
 
 ## Future Directions
+Ideally, a more comprehensive test and analysis of the filings would be made.  Also, I would like to automate the inputs to only have the csv file read in and the current quarter date as inputs and have the scripts run and return graphs and alaysis to make scalability and portability to other banks better.
+
+## Acknowledgements
+DSI Denver Immersive staff/cohort
+kayla Thomas
+Jess Curley
+Chris Reger
+Ian Hetterich
+Travis Koenigsknecht
+Scrum group 1
+
+  
 
 ## Sources 
+
+https://www.ffiec.gov/npw/Institution/TopHoldings
 
 https://www.americanbanker.com/news/fed-details-stress-test-scenarios-for-2021#:~:text=The%20Fed%20conducts%20two%20separate,do%20so%20by%20April%205.
 
 https://www.dob.texas.gov/sites/default/files/files/Applications-Forms-Publications/Publications/Top-Banks/top0319.pdf
+
+https://www.federalreserve.gov/boarddocs/supmanual/bhcpr/UsersGuide13/0313.pdf
+
 
 ## Acknowledgements
