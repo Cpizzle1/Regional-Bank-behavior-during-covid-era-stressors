@@ -1,9 +1,9 @@
-# capstone1
+# capstone 1
 
 ## Introduction 
-The recent Covid crisis has not only created a health crisis, but also an economic one. Rising unemployment and concurrent supply and demand shocks has put a strain on the US financial system. The US federal reserve periodically does stress testing on banks to ensure their stability largely in part due to the 2008 crisis fallout. Regional banks with holdings 100 billion to 250 billion have been given an exemption for 2021.  
+The recent Covid crisis has not only created a health crisis, but also an economic one. Rising unemployment and concurrent supply and demand shocks has put a strain on the US economy and financial system. The US Federal Reserve periodically does stress testing on banks to ensure their stability largely in part due to the 2008 crisis fallout. Regional banks with holdings 100 billion to 250 billion have been given an exemption for 2021.  
 
-The goal of this study is to examine the filings of Texas Capital One Bank (TCBI) and its quarterly/annual filings in an effort to understand their current stress levels and weaknesses.  Texas Capital One Bank was chosen because of its location.  Due to the shale industry in the permian basin being particularly affected by Covid, and more recently a weather freeze incapacitating a large portion of Texas' energy grid a close examination of one of the largest banks in texas was chosen. 
+The goal of this study is to examine the filings of Texas Capital One Bank (TCBI) and its quarterly/annual filings in an effort to understand their current stress levels and weaknesses.  Texas Capital One Bank was chosen because of its location.  Due to the shale industry in the permian basin being particularly affected by Covid, and more recently a weather freeze incapacitating a large portion of Texas' energy grid, a close examination of one of the largest banks in Texas was chosen. 
 
 ## Methods
 Holding companies with reported total assets are required to file reports with the Federal Reservere and those reports are posted quarterly on the [Federal Financial Institutions Examination Council](https://www.ffiec.gov/)  Analysis was done on the csv file posted on the FFIEC website with code found in SRC folder.

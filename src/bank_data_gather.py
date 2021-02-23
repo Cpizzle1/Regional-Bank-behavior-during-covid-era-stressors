@@ -4,6 +4,8 @@ import matplotlib as plt
 import scipy.stats as stats
 import matplotlib.pyplot as plt
 
+
+
 def divide_1000(lst):
     lst1 = []
     for i in lst:
@@ -11,6 +13,8 @@ def divide_1000(lst):
         i = round(i, 1)
         lst1.append(i) 
     return lst1
+
+
 
 def convert_bank_data_to_float(data_lst):
     
@@ -20,7 +24,7 @@ def convert_bank_data_to_float(data_lst):
         lst.append(i)
     return lst
 
-def autolabel(rects):
+def autolabel(rects, ax):
    
     for rect in rects:
         height = rect.get_height()
@@ -31,6 +35,10 @@ def autolabel(rects):
                     ha='center', va='bottom')
 
 if __name__ == "__main__":
+
+
+    # lst12 = [100000, 10003,34004023, 13553663, 363464363]
+    # print(divide_1000(lst12))
     tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
     #sept2020 TCBI data
     assets_total_sept2020 = tcbi.iloc[3] 
@@ -73,8 +81,8 @@ if __name__ == "__main__":
     fig.tight_layout()
 
 
-    plt.show()
-    print(converted_assets_total_lst)
+    # plt.show()
+    # print(converted_assets_total_lst)
 
 
 
