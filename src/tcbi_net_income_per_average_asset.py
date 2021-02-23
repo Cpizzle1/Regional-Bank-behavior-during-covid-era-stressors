@@ -4,7 +4,7 @@ import numpy as np
  
 import matplotlib.pyplot as plt
 import scipy.stats as stats
-from bank_data_gather import convert_bank_data_to_float
+from bank_data_gather import  *  #convert_bank_data_to_float
 
 
 tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
@@ -44,6 +44,8 @@ ax.set_title('NET OPERATING INCOME / AVERAGE ASSETS (YTD)', Fontsize = 24)
 ax.set_xticks(x)
 ax.set_xticklabels(bank_dates)
 ax.legend()
+autolabel(tcbi_income_per_asset_ax, ax)
+autolabel(pg_income_per_asset_ax, ax)
 plt.show()
 
 
@@ -59,7 +61,7 @@ plt.show()
 #                     ha='center', va='bottom')
 
 
-# autolabel(tcbi_income_per_asset_ax)
-# autolabel(pg_income_per_asset_ax)
+# autolabel(tcbi_income_per_asset_ax, ax)
+# autolabel(pg_income_per_asset_ax, ax)
 
 # plt.savefig('TCBI_net_income_per_average_asset.png')
