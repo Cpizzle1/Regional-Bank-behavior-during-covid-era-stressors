@@ -42,7 +42,7 @@ ax.set_title('Commercial & Industrial Loans 30-89 days late', Fontsize = 24)
 ax.set_xticks(x)
 ax.set_xticklabels(bank_dates)
 ax.legend()
-# Net interest income on a taxable equivalent basis divided by average assets.
+
 
 
 def autolabel(rects):
@@ -61,3 +61,8 @@ autolabel(pg_CI_30_90days_pastdue_ax)
 
 # plt.savefig('CI_loans_30_89_late.png')
 plt.show()
+
+if __name__ == "__main__":
+    pass
+    
+    

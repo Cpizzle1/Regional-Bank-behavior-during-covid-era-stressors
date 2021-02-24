@@ -52,5 +52,5 @@ def CI_loans_30_late(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank
 if __name__ == "__main__":
     tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv", index_col='ItemName' )
     jpm = pd.read_csv("~/data/JPM_sept2020.csv", index_col='ItemName')
-    print(CI_loans_30_late(jpm, quarter = 'sept', year = 2020, Bank_name = 'JPM'))
-    # print(CI_loans_30_late(tcbi, quarter = 'sept', year = 2020, Bank_name = 'TCBI'))
+    # print(CI_loans_30_late(jpm, quarter = 'sept', year = 2020, Bank_name = 'JPM'))
+    print(CI_loans_30_late(tcbi, quarter = 'sept', year = 2020, Bank_name = 'TCBI'))

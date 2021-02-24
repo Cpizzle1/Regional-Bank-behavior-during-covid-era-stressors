@@ -7,44 +7,38 @@ from bank_data_gather import *
 
 def assets_by_percent(dataframe, Bank_name = 'Bank'):
     #bank assets
-    percent_asset_real_estate_loan_sept2020 = dataframe.iloc[2516]
-    percent_asset_commercial_industrial_loan_sept2020 = dataframe.iloc[2531]
-    percent_asset_loan_to_individuals_sept2020 = dataframe.iloc[2546]
-    percent_asset_other_loan_sept2020 = dataframe.iloc[2576]
-    percent_asset_bank_balances_sept2020 = dataframe.iloc[2501]
-    percent_asset_other_assets_sept2020 = dataframe.iloc[2591]
-    percent_asset_debt_securities_greater_than_year_sept2020 = dataframe.iloc[2801]
+    percent_asset_real_estate_loan_sept2020 = dataframe.loc['BHSR112']
+    percent_asset_commercial_industrial_loan_sept2020 = dataframe.loc['BHSR113']
+    percent_asset_loan_to_individuals_sept2020 = dataframe.loc['BHSR114']
+    percent_asset_other_loan_sept2020 = dataframe.loc['BHSR136']
+    percent_asset_bank_balances_sept2020 = dataframe.loc['BHSR061']
+    percent_asset_other_assets_sept2020 = dataframe.loc['BHSR139']
+    percent_asset_debt_securities_greater_than_year_sept2020 = dataframe.loc['BHSR252']
 
-#Peer group assets
-    peer_real_estate_total_asset_sept2020 = dataframe.iloc[2526]
-    peer_comm_and_indust_total_asset_sept2020 =dataframe.iloc[2541]
-    peer_individual_total_asset_sept2020 =dataframe.iloc[2556]
-    peer_other_total_asset_sept2020 =dataframe.iloc[2586]
-    peer_bank_balances_asset_sept2020 =dataframe.iloc[2511]
-    peer_debt_securities_less_year_set_sept2020 =dataframe.iloc[2811]
-    peer_all_other_assets_sept2020 =dataframe.iloc[2601]
+    #Peer group assets
+    peer_real_estate_total_asset_sept2020 = dataframe.loc['PHSR112']
+    peer_comm_and_indust_total_asset_sept2020 =dataframe.loc['PHSR113']
+    peer_individual_total_asset_sept2020 =dataframe.loc['PHSR114']
+    peer_other_total_asset_sept2020 =dataframe.loc['PHSR136']
+    peer_bank_balances_asset_sept2020 =dataframe.loc['PHSR061']
+    peer_debt_securities_less_year_set_sept2020 =dataframe.loc['PHSR252']
+    peer_all_other_assets_sept2020 =dataframe.loc['PHSR139']
 
     total_percent_lst = [percent_asset_real_estate_loan_sept2020,percent_asset_commercial_industrial_loan_sept2020,percent_asset_loan_to_individuals_sept2020,percent_asset_other_loan_sept2020,percent_asset_bank_balances_sept2020,percent_asset_debt_securities_greater_than_year_sept2020,percent_asset_other_assets_sept2020]
-
-
     pg_total_asset_catagory_by_percent_sept2020 = [peer_real_estate_total_asset_sept2020,peer_comm_and_indust_total_asset_sept2020,peer_individual_total_asset_sept2020, peer_other_total_asset_sept2020,peer_bank_balances_asset_sept2020,peer_debt_securities_less_year_set_sept2020,peer_all_other_assets_sept2020]
 
-    total_list = (convert_bank_data_to_float(total_percent_lst))
-    converted_pg_total_asset_catagory_by_percent_sept2020 = (convert_bank_data_to_float(pg_total_asset_catagory_by_percent_sept2020))
+    total_list = (convert_bank_data_to_floatv2(total_percent_lst))
+    converted_pg_total_asset_catagory_by_percent_sept2020 = (convert_bank_data_to_floatv2(pg_total_asset_catagory_by_percent_sept2020))
 
 
     total_percent_catagories=['Real Estate', 'Comm&Industrial', 'Individ', 'Other', 'Bank balances', 'Securities>1year','All Other']
-
-    total_list
-
-    converted_pg_total_asset_catagory_by_percent_sept2020
 
     x = np.arange(len(total_percent_catagories))  
     width = 0.35  
 
     fig, ax = plt.subplots(figsize = (12, 8))
     rects1 = ax.bar(x - width/2, total_list, width, label=f'{Bank_name}')
-    rects2 = ax.bar(x + width/2, converted_pg_total_asset_catagory_by_percent_sept2020, width, label='Peer Group')
+    rects2 = ax.bar(x + width/2, converted_pg_total_asset_catagory_by_percent_sept2020, width, label='Peer Group n=130')
 
 
     ax.set_ylabel('Percent Asset')
@@ -64,8 +58,13 @@ def assets_by_percent(dataframe, Bank_name = 'Bank'):
 
 
 if __name__ == "__main__":
-    tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
+    # tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
+    # print(assets_by_percent(tcbi, 'TCBI'))
+
+    tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv", index_col='ItemName' )
+    jpm = pd.read_csv("~/data/JPM_sept2020.csv", index_col='ItemName')
     print(assets_by_percent(tcbi, 'TCBI'))
+    # print(assets_by_percent(jpm, 'JPM'))
     
 
 

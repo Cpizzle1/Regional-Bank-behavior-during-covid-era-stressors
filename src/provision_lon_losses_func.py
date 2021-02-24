@@ -8,19 +8,19 @@ from bank_data_gather import *
 
 
 
-def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
+def prov_net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
 
-    provison_loan_losses_q2020 = dataframe.iloc[1006]
-    provison_loan_losses_q2019 = dataframe.iloc[1007]
-    provison_loan_losses_dec2019 = dataframe.iloc[1008]
-    provison_loan_losses_dec2018 = dataframe.iloc[1009]
-    provison_loan_losses_dec2017 = dataframe.iloc[1010]
+    provison_loan_losses_q2020 = dataframe.loc['BHCK4230']
+    provison_loan_losses_q2019 = dataframe.loc['BHCK4230_4Q']
+    provison_loan_losses_dec2019 = dataframe.loc['BHCK4230_1Y']
+    provison_loan_losses_dec2018 = dataframe.loc['BHCK4230_2Y']
+    provison_loan_losses_dec2017 = dataframe.loc['BHCK4230_3Y']
 
-    net_loan_losses_sept2020 = dataframe.iloc[5308]
-    net_loan_losses_sept2019 = dataframe.iloc[5309]
-    net_loan_losses_dec2019 = dataframe.iloc[5310]
-    net_loan_losses_dec2018 = dataframe.iloc[5311]
-    net_loan_losses_dec2017 = dataframe.iloc[5312]
+    net_loan_losses_sept2020 = dataframe.loc['BHSR853']
+    net_loan_losses_sept2019 = dataframe.loc['BHSR853_4Q']
+    net_loan_losses_dec2019 = dataframe.loc['BHSR853_1Y']
+    net_loan_losses_dec2018 = dataframe.loc['BHSR853_2Y']
+    net_loan_losses_dec2017 = dataframe.loc['BHSR853_3Y']
 
 
     
@@ -30,10 +30,10 @@ def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
 
     
     provision_loan_losses = [provison_loan_losses_dec2017, provison_loan_losses_dec2018,provison_loan_losses_q2019,provison_loan_losses_dec2019, provison_loan_losses_q2020 ]
-    provision_loan_loss_lst = (divide_1000(convert_bank_data_to_float(provision_loan_losses)))
+    provision_loan_loss_lst = (divide_1000(convert_bank_data_to_floatv2(provision_loan_losses)))
 
     net_loan_losses = [net_loan_losses_dec2017, net_loan_losses_dec2018, net_loan_losses_sept2019, net_loan_losses_dec2019, net_loan_losses_sept2020]
-    net_loan_losses_converted = (divide_1000(convert_bank_data_to_float(net_loan_losses)))
+    net_loan_losses_converted = (divide_1000(convert_bank_data_to_floatv2(net_loan_losses)))
 
     
 
@@ -51,7 +51,7 @@ def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
     
     
     ax.set_ylabel('Millions (USD)', fontsize = 14)
-    ax.set_title('Loan Losses & Provision for Loan Losses', Fontsize = 24)
+    ax.set_title(f'Loan Losses & Provision for Loan Losses ({Bank_name})', Fontsize = 24)
     ax.set_xticks(x)
     ax.set_xticklabels(bank_dates)
     ax.legend(fontsize= 14)
@@ -62,11 +62,16 @@ def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
     autolabel(net_loan_losses_ax, ax)
     
 
-   
+    
+    # fig.savefig("JPM_provisions&_losses.png", dpi=200)
     plt.show()
 
 if __name__ == "__main__":
-    tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
     
-    print(net_loan_losses(tcbi, quarter = 'sept', year = 2020, Bank_name = 'TCBI'))
+
+
+    tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv", index_col='ItemName' )
+    jpm = pd.read_csv("~/data/JPM_sept2020.csv", index_col='ItemName')
+    # print(prov_net_loan_losses(tcbi, 'TCBI'))
+    print(prov_net_loan_losses(jpm, Bank_name ='JPM'))
     

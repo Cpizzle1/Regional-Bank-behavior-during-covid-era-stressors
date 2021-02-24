@@ -4,12 +4,11 @@ import numpy as np
  
 import matplotlib.pyplot as plt
 import scipy.stats as stats
-from bank_data_gather import * #convert_bank_data_to_float, divide_1000
+from bank_data_gather import * 
 
-# from bank_data_gather import divide_1000
-# from bank_data_gather import autolabel
 
-tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
+
+
 
 
 
@@ -47,25 +46,5 @@ plt.show()
 
 
 if __name__ == "__main__":
-    pass
+    tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
     
-
-# def divide_1000(lst):
-#     lst1 = []
-#     for i in lst:
-#         i = i/1000
-#         i = round(i, 1)
-#         lst1.append(i) 
-    # return lst1
-
-
-
-# def autolabel(rects):
-    
-#     for rect in rects:
-#         height = rect.get_height()
-#         ax.annotate('{}'.format(height),
-#                     xy=(rect.get_x() + rect.get_width() / 2, height),
-#                     xytext=(0, 3),  # 3 points vertical offset
-#                     textcoords="offset points",
-#                     ha='center', va='bottom')
