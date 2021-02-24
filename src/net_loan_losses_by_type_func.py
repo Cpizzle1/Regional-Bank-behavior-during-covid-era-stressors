@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as stats
 from bank_data_gather import *
 
-tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
+
 def net_loan_losses_by_type(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
     
     net_losses_type_CI_sept2020 = dataframe.iloc[4668]
@@ -38,9 +38,7 @@ def net_loan_losses_by_type(dataframe, quarter = 'sept', year = 2020, Bank_name 
     converted_pg_total_asset_catagory_by_percent_sept2020 = (convert_bank_data_to_float(pg_total_asset_catagory_by_percent_sept2020))
 
 
-    # total_percent_catagories=['Real Estate', 'Comm&Industrial', 'Individ', 'Other', 'Bank balances', 'Securities>1year','All Other']
-
-    # total_list
+    
 
     converted_pg_total_asset_catagory_by_percent_sept2020
 
@@ -61,14 +59,16 @@ def net_loan_losses_by_type(dataframe, quarter = 'sept', year = 2020, Bank_name 
 
     autolabel(rects1,ax)
     autolabel(rects2, ax)
-    fig.savefig("net_CI_loan_lo.png", dpi=200)
+    # fig.savefig("net_CI_loan_lo.png", dpi=200)
 
     plt.show()
-    # fig.savefig("filename.png", dpi=200)
+    
 
-print(net_loan_losses_by_type(tcbi, quarter ='sept', Bank_name = 'TCBI'))
+
 
 
 
 if __name__ == "__main__":
-    pass
+    tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
+    print(net_loan_losses_by_type(tcbi, quarter ='sept', Bank_name = 'TCBI'))
+    

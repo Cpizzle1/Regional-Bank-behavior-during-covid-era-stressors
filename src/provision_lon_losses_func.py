@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as stats
 from bank_data_gather import *
 
-tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
+
 
 def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
 
@@ -28,29 +28,18 @@ def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
 
     bank_dates = make_bank_dates(quarter, year)
 
-    # net_income = [net_income_dec2017,net_income_dec2018, net_income_sept2019,net_income_dec2019,  net_income_sept2020 ]
+    
     provision_loan_losses = [provison_loan_losses_dec2017, provison_loan_losses_dec2018,provison_loan_losses_q2019,provison_loan_losses_dec2019, provison_loan_losses_q2020 ]
     provision_loan_loss_lst = (divide_1000(convert_bank_data_to_float(provision_loan_losses)))
 
     net_loan_losses = [net_loan_losses_dec2017, net_loan_losses_dec2018, net_loan_losses_sept2019, net_loan_losses_dec2019, net_loan_losses_sept2020]
     net_loan_losses_converted = (divide_1000(convert_bank_data_to_float(net_loan_losses)))
 
-    # fig, ax= plt.subplots(1, figsize=(5,5),dpi = 200)
-    # rects1= ax.bar(bank_dates, provision_loan_loss_lst)
-    # ax.set_title (f'{Bank_name} Net Loan Losses (YTD)', fontsize = 20)
-    # ax.set_ylabel('Millions(USD)', fontsize = 14)
-    # ax.ticklabel_format(axis = 'y', style = 'plain')
-
-    # autolabel(rects1, ax)
+    
 
 
-    # fig.tight_layout()
-
-    # plt.show()
-
-
-    x = np.arange(len(bank_dates))  # the label locations
-    width = 0.35  # the width of the bars
+    x = np.arange(len(bank_dates))  
+    width = 0.35  
     
 
     fig, ax = plt.subplots(figsize = (12, 8))
@@ -73,7 +62,11 @@ def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
     autolabel(net_loan_losses_ax, ax)
     
 
-    plt.savefig('Loan_loss_provision_loan_loss.png')
-    # fig.savefig("net_CI_loan_lo.png", dpi=200)
+   
     plt.show()
-print(net_loan_losses(tcbi, quarter = 'sept', year = 2020, Bank_name = 'TCBI'))
+
+if __name__ == "__main__":
+    tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
+    
+    print(net_loan_losses(tcbi, quarter = 'sept', year = 2020, Bank_name = 'TCBI'))
+    

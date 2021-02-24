@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 import scipy.stats as stats
 from bank_data_gather import *
 
-tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
+
 def net_income_per_average_asset(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
         
         
@@ -25,6 +25,7 @@ def net_income_per_average_asset(dataframe, quarter = 'sept', year = 2020, Bank_
     year_before_q = (quarter + str(year-1))
     dec_2year_before = ('dec'+ str(year-2))
     dec_3year_before = ('dec'+ str(year-3))
+    
     bank_dates = [dec_3year_before ,  dec_2year_before,  year_before_q,dec_year_before, current_q ]
 
 
@@ -41,7 +42,7 @@ def net_income_per_average_asset(dataframe, quarter = 'sept', year = 2020, Bank_
 
     fig, ax = plt.subplots(figsize = (12, 8))
     tcbi_income_per_asset_ax = ax.bar(x - width/2, converted_tcbi_income_per_asset_lst, width, label=f'{Bank_name}')
-    pg_income_per_asset_ax = ax.bar(x + width/2, converted_pg_income_per_asset_lst, width, label='Peer Group')
+    pg_income_per_asset_ax = ax.bar(x + width/2, converted_pg_income_per_asset_lst, width, label='Peer Group n=130')
 
 # Net interest income on a taxable equivalent basis divided by average assets.
     ax.set_ylabel('Ratio', fontsize =12)
@@ -51,15 +52,19 @@ def net_income_per_average_asset(dataframe, quarter = 'sept', year = 2020, Bank_
     ax.legend()
     autolabel(tcbi_income_per_asset_ax,ax)
     autolabel(pg_income_per_asset_ax, ax)
+    
     plt.show()
 
 
 
 
-print(net_income_per_average_asset(tcbi, quarter = 'sept', year = 2020, Bank_name = 'Bank'))
+
 
 if __name__ == "__main__":
-    pass
+    tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
+    print(net_income_per_average_asset(tcbi, quarter = 'sept', year = 2020, Bank_name = 'Bank'))
+
+    
 
 
 

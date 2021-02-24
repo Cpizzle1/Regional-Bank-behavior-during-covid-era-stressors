@@ -33,6 +33,13 @@ def convert_bank_data_to_float(data_lst):
         i = float(i[2])
         lst.append(i)
     return lst
+def convert_bank_data_to_floatv2(data_lst):
+    
+    lst = []
+    for i in data_lst:
+        i = float(i[1])
+        lst.append(i)
+    return lst
 
 def autolabel(rects, ax):
    
