@@ -24,12 +24,7 @@ def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
 
 
     
-    # current_q = (quarter +str(year))
-    # dec_year_before = ('dec'+ str(year-1))
-    # year_before_q = (quarter + str(year-1))
-    # dec_2year_before = ('dec'+ str(year-2))
-    # dec_3year_before = ('dec'+ str(year-3))
-    # bank_dates = [dec_3year_before ,  dec_2year_before,  year_before_q,dec_year_before, current_q ]
+   
 
     bank_dates = make_bank_dates(quarter, year)
 
@@ -59,7 +54,7 @@ def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
     
 
     fig, ax = plt.subplots(figsize = (12, 8))
-    ax.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
+    # ax.grid(color='b', alpha=0.5, linestyle='dashed', linewidth=0.5)
     
 
     provision_loan_loss_ax = ax.bar(x - width/2, provision_loan_loss_lst, width,color = 'k',alpha= 0.85, label='Provision for loan losses')
@@ -78,6 +73,7 @@ def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
     autolabel(net_loan_losses_ax, ax)
     
 
-    # plt.savefig('CI_loans_30_89_late.png')
+    plt.savefig('Loan_loss_provision_loan_loss.png')
+    # fig.savefig("net_CI_loan_lo.png", dpi=200)
     plt.show()
 print(net_loan_losses(tcbi, quarter = 'sept', year = 2020, Bank_name = 'TCBI'))

@@ -38,6 +38,21 @@ Income per Asset. This indicates that large assets are producing small quantitie
 
 [Figure1.4]
     <div align="center">
+      <img src="images/Loan_loss_provision_loan_loss.png">
+    </div>
+
+<br>
+
+
+[Figure2.0]
+    <div align="center">
+      <img src="images/net_CI_loan_lo.png">
+    </div>
+
+<br>
+
+[Figure2.1]
+    <div align="center">
       <img src="images/CI_loans_30_89_late.png">
     </div>
 
