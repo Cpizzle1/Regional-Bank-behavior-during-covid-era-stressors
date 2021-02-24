@@ -4,6 +4,16 @@ import matplotlib as plt
 import scipy.stats as stats
 import matplotlib.pyplot as plt
 
+def make_bank_dates(quarter, year):
+
+    current_q = (quarter +str(year))
+    dec_year_before = ('dec'+ str(year-1))
+    year_before_q = (quarter + str(year-1))
+    dec_2year_before = ('dec'+ str(year-2))
+    dec_3year_before = ('dec'+ str(year-3))
+    bank_dates = [dec_3year_before ,  dec_2year_before,  year_before_q,dec_year_before, current_q ]
+    return bank_dates
+
 
 
 def divide_1000(lst):

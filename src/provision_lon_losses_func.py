@@ -24,12 +24,14 @@ def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
 
 
     
-    current_q = (quarter +str(year))
-    dec_year_before = ('dec'+ str(year-1))
-    year_before_q = (quarter + str(year-1))
-    dec_2year_before = ('dec'+ str(year-2))
-    dec_3year_before = ('dec'+ str(year-3))
-    bank_dates = [dec_3year_before ,  dec_2year_before,  year_before_q,dec_year_before, current_q ]
+    # current_q = (quarter +str(year))
+    # dec_year_before = ('dec'+ str(year-1))
+    # year_before_q = (quarter + str(year-1))
+    # dec_2year_before = ('dec'+ str(year-2))
+    # dec_3year_before = ('dec'+ str(year-3))
+    # bank_dates = [dec_3year_before ,  dec_2year_before,  year_before_q,dec_year_before, current_q ]
+
+    bank_dates = make_bank_dates(quarter, year)
 
     # net_income = [net_income_dec2017,net_income_dec2018, net_income_sept2019,net_income_dec2019,  net_income_sept2020 ]
     provision_loan_losses = [provison_loan_losses_dec2017, provison_loan_losses_dec2018,provison_loan_losses_q2019,provison_loan_losses_dec2019, provison_loan_losses_q2020 ]
