@@ -50,7 +50,7 @@ def assets_by_percent(dataframe, Bank_name = 'Bank'):
 
     autolabel(rects1,ax)
     autolabel(rects2, ax)
-
+    fig.savefig("TCBI_PG_assets_by_percent.png", dpi=200)
     plt.show()
 
 
@@ -58,8 +58,7 @@ def assets_by_percent(dataframe, Bank_name = 'Bank'):
 
 
 if __name__ == "__main__":
-    # tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
-    # print(assets_by_percent(tcbi, 'TCBI'))
+   
 
     tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv", index_col='ItemName' )
     jpm = pd.read_csv("~/data/JPM_sept2020.csv", index_col='ItemName')

@@ -70,13 +70,13 @@ This analysis does have the underpinnings of a proof of concept of a quarterly a
 Ideally, a more comprehensive test and analysis of the filings would be made.  Also, I would like to automate the inputs to only have the csv file read in and the current quarter date as inputs and have the scripts run and return graphs and alaysis to make scalability and portability to other banks better.
 
 ## Acknowledgements
-DSI Denver Immersive staff/cohort
-kayla Thomas
-Jess Curley
-Chris Reger
-Ian Hetterich
-Travis Koenigsknecht
-Scrum group 1
+DSI Denver Immersive staff/cohort  
+kayla Thomas  
+Jess Curley  
+Chris Reger  
+Ian Hetterich  
+Travis Koenigsknecht  
+Scrum group 1  
 
   
 
@@ -91,4 +91,4 @@ https://www.dob.texas.gov/sites/default/files/files/Applications-Forms-Publicati
 https://www.federalreserve.gov/boarddocs/supmanual/bhcpr/UsersGuide13/0313.pdf
 
 
-## Acknowledgements
+

@@ -26,10 +26,10 @@ def net_income_func(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
     converted_net_income = (divide_1000(convert_bank_data_to_floatv2(net_income)))
 
 
-    fig, ax= plt.subplots(1, figsize=(6,5),dpi = 200)
+    fig, ax= plt.subplots(1, figsize=(6,4),dpi = 200)
     rects1= ax.bar(bank_dates, converted_net_income)
-    ax.set_title (f'{Bank_name} Net Income (YTD)', fontsize = 24)
-    ax.set_ylabel('Millions(USD)', fontsize = 14)
+    ax.set_title (f'{Bank_name} Net Income (YTD)', fontsize = 20)
+    ax.set_ylabel('Millions(USD)', fontsize = 12)
 
     ax.ticklabel_format(axis = 'y', style = 'plain')
 
@@ -37,7 +37,7 @@ def net_income_func(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
 
 
     fig.tight_layout()
-
+    fig.savefig("Goldman_Sachs_income.png", dpi=200)
     plt.show()
 
 
@@ -47,8 +47,13 @@ if __name__ == "__main__":
     
     tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv", index_col='ItemName' )
     jpm = pd.read_csv("~/data/JPM_sept2020.csv", index_col='ItemName')
-    # print(net_income_func(tcbi, 'sept', 2020, 'TCBI'))
-    print(net_income_func(jpm, 'sept', 2020, 'JPM'))
+    
+    GS = pd.read_csv("~/data/Goldman_Sachs_sept2020.csv", index_col='ItemName')
+    Cap_one = pd.read_csv("~/data/Capital_one_sept2020.csv", index_col='ItemName')
+    citi_group = pd.read_csv("~/data/Citigroup_sept2020.csv", index_col='ItemName')
+    # print(net_income_func(Cap_one, 'sept', 2020, 'Capitol One'))
+    # print(net_income_func(jpm, 'sept', 2020, 'JPM'))
+    print(net_income_func(GS, 'sept', 2020, 'Goldman_sachs'))
   
    
 
