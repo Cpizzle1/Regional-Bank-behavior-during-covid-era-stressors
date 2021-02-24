@@ -8,17 +8,17 @@ tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
 def CI_loans_30_late(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
         
         
-    CI_30_89_days_past_due_sept2020=tcbi.iloc[5896]
-    CI_30_89_days_past_due_sept2019=tcbi.iloc[5897]
-    CI_30_89_days_past_due_dec2019= tcbi.iloc[5898]
-    CI_30_89_days_past_due_dec2018= tcbi.iloc[5899]
-    CI_30_89_days_past_due_dec2017= tcbi.iloc[5900]
+    CI_30_89_days_past_due_sept2020=dataframe.iloc[5896]
+    CI_30_89_days_past_due_sept2019=dataframe.iloc[5897]
+    CI_30_89_days_past_due_dec2019= dataframe.iloc[5898]
+    CI_30_89_days_past_due_dec2018= dataframe.iloc[5899]
+    CI_30_89_days_past_due_dec2017= dataframe.iloc[5900]
 
-    PG_CI_30_89_days_past_due_sept2020= tcbi.iloc[5906]
-    PG_CI_30_89_days_past_due_sept2019= tcbi.iloc[5907]
-    PG_CI_30_89_days_past_due_dec2019= tcbi.iloc[5908]
-    PG_CI_30_89_days_past_due_dec2018= tcbi.iloc[5909]
-    PG_CI_30_89_days_past_due_dec2017= tcbi.iloc[5910]
+    PG_CI_30_89_days_past_due_sept2020=dataframe.iloc[5906]
+    PG_CI_30_89_days_past_due_sept2019=dataframe.iloc[5907]
+    PG_CI_30_89_days_past_due_dec2019= dataframe.iloc[5908]
+    PG_CI_30_89_days_past_due_dec2018= dataframe.iloc[5909]
+    PG_CI_30_89_days_past_due_dec2017= dataframe.iloc[5910]
 
     current_q = (quarter +str(year))
     dec_year_before = ('dec'+ str(year-1))

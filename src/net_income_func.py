@@ -11,11 +11,11 @@ tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
 def net_income_func(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
 
 
-    net_income_dec2017 = tcbi.iloc[1120]
-    net_income_dec2018 = tcbi.iloc[1119]
-    net_income_sept2019 = tcbi.iloc[1117]
-    net_income_dec2019 = tcbi.iloc[1118]
-    net_income_sept2020 = tcbi.iloc[1116]
+    net_income_dec2017 = dataframe.iloc[1120]
+    net_income_dec2018 = dataframe.iloc[1119]
+    net_income_sept2019= dataframe.iloc[1117]
+    net_income_dec2019 = dataframe.iloc[1118]
+    net_income_sept2020 =dataframe.iloc[1116]
     current_q = (quarter +str(year))
     dec_year_before = ('dec'+ str(year-1))
     year_before_q = (quarter + str(year-1))
@@ -42,7 +42,7 @@ def net_income_func(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
     fig.tight_layout()
 
     plt.show()
-# print(str(tcbi))
+
 print(net_income_func(tcbi, 'sept', 2020, 'TCBI'))
 
 

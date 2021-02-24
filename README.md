@@ -1,12 +1,12 @@
 # capstone 1
 
 ## Introduction 
-The recent Covid crisis has not only created a health crisis, but also an economic one. Rising unemployment and concurrent supply and demand shocks has put a strain on the US economy and financial system. The US Federal Reserve periodically does stress testing on banks to ensure their stability largely in part due to the 2008 crisis fallout. Regional banks with holdings 100 billion to 250 billion have been given an exemption for 2021.  
+The recent Covid crisis has not only created a health crisis, but also an economic one. Rising unemployment and concurrent supply and demand shocks has put a strain on the US economy and financial system. The US Federal Reserve periodically does stress testing on banks twice a year to ensure their stability largely in part due to the 2008 crisis fallout. Regional banks with holdings 100 billion to 250 billion have been given an exemption for 2021.  
 
 The goal of this study is to examine the filings of Texas Capital One Bank (TCBI) and its quarterly/annual filings in an effort to understand their current stress levels and weaknesses.  Texas Capital One Bank was chosen because of its location.  Due to the shale industry in the permian basin being particularly affected by Covid, and more recently a weather freeze incapacitating a large portion of Texas' energy grid, a close examination of one of the largest banks in Texas was chosen. 
 
 ## Methods
-Holding companies with reported total assets are required to file reports with the Federal Reservere and those reports are posted quarterly on the [Federal Financial Institutions Examination Council](https://www.ffiec.gov/)  Analysis was done on the csv file posted on the FFIEC website with code found in SRC folder.
+Holding companies with assets greather than $10 Billion USD are required to file reports with the Federal Reservere and those reports are posted quarterly on the [Federal Financial Institutions Examination Council](https://www.ffiec.gov/)  Analysis was done on the csv file posted on the FFIEC website with code found in SRC folder.
 
 ## Results
 
@@ -16,6 +16,7 @@ Holding companies with reported total assets are required to file reports with t
     </div>
 
 <br>
+Dramatic drop off in Net Income for 2020 
 
 [Figure1.2]
     <div align="center">
@@ -24,6 +25,8 @@ Holding companies with reported total assets are required to file reports with t
 
 <br>
 
+Loan Portfolio (Assets) of Texas Capital One
+
 [Figure1.3]
     <div align="center">
       <img src="images/TCBI_net_income_per_average_asset.png">
@@ -31,12 +34,16 @@ Holding companies with reported total assets are required to file reports with t
 
 <br>
 
+Income per Asset. This indicates that large assets are producing small quantities of income relative to other Banks
+
 [Figure1.4]
     <div align="center">
       <img src="images/CI_loans_30_89_late.png">
     </div>
 
 <br>
+
+Indicates that the TCBI has a larger portion of loans that are in early phases of non-performance
 
 ## Conclusions
 It does seem that TCBI has been significantly less profitable in 2020, and their non-performing loans have grown relative to 2019, but they have also allocated a larger portion of their assets to loan loss provisions and short term highly-liquid positions.  Without a full test-suite and understanding of bank fundamentals, I believe the only thing we can say with some certainy is that TCBI is under a larger degress of financial stress than 2019.                   

@@ -8,17 +8,17 @@ tcbi = pd.read_csv("~/data/BHCPR_2706735_20200930.csv")
 def net_income_per_average_asset(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
         
         
-    net_income_per_avg_asset_sept2020 = tcbi.iloc[492]
-    net_income_per_avg_asset_sept2019 = tcbi.iloc[493]
-    net_income_per_avg_asset_dec2019 = tcbi.iloc[494]
-    net_income_per_avg_asset_dec2018 = tcbi.iloc[495]
-    net_income_per_avg_asset_dec2017 = tcbi.iloc[496]
+    net_income_per_avg_asset_sept2020= dataframe.iloc[492]
+    net_income_per_avg_asset_sept2019= dataframe.iloc[493]
+    net_income_per_avg_asset_dec2019 = dataframe.iloc[494]
+    net_income_per_avg_asset_dec2018 = dataframe.iloc[495]
+    net_income_per_avg_asset_dec2017 = dataframe.iloc[496]
 
-    pg_net_income_per_avg_asset_sept2020 = tcbi.iloc[502]
-    pg_net_income_per_avg_asset_sept2019 = tcbi.iloc[503]
-    pg_net_income_per_avg_asset_dec2019 = tcbi.iloc[504]
-    pg_net_income_per_avg_asset_dec2018 = tcbi.iloc[505]
-    pg_net_income_per_avg_asset_dec2017 = tcbi.iloc[506]
+    pg_net_income_per_avg_asset_sept2020= dataframe.iloc[502]
+    pg_net_income_per_avg_asset_sept2019= dataframe.iloc[503]
+    pg_net_income_per_avg_asset_dec2019 = dataframe.iloc[504]
+    pg_net_income_per_avg_asset_dec2018 = dataframe.iloc[505]
+    pg_net_income_per_avg_asset_dec2017 = dataframe.iloc[506]
 
     current_q = (quarter +str(year))
     dec_year_before = ('dec'+ str(year-1))
