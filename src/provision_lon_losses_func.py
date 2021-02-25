@@ -63,7 +63,7 @@ def prov_net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = '
     
 
     
-    fig.savefig("citigroup_provisions&_losses.png", dpi=200)
+    fig.savefig("JPM_provisions&_losses.png", dpi=200)
     plt.show()
 
 if __name__ == "__main__":
@@ -76,5 +76,5 @@ if __name__ == "__main__":
     Cap_one = pd.read_csv("~/data/Capital_one_sept2020.csv", index_col='ItemName')
     citi_group = pd.read_csv("~/data/Citigroup_sept2020.csv", index_col='ItemName')
     # print(prov_net_loan_losses(tcbi, 'TCBI'))
-    print(prov_net_loan_losses(citi_group, Bank_name ='Citigroup'))
+    print(prov_net_loan_losses(jpm, Bank_name ='JPM'))
     

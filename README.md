@@ -42,7 +42,20 @@ Income per Asset. This indicates that large assets are producing small quantitie
     </div>
 
 <br>
+[Figure1.5]
 
+<div class = 'row'>
+    <div class = 'column'>
+    <img src="images/Cap_one_provisions&_losses.png" width="250" height="200" >
+    <img src="images/JPM_provisions&_losses.png" width="250" height="200">
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">
+        <img src="images/GS_provisions&_losses.png" width="250" height="200">
+         <img src="images/citigroup_provisions&_losses.png" width="250" height="200">
+    </div>
+</div>
 
 [Figure2.0]
     <div align="center">
@@ -91,4 +104,17 @@ https://www.dob.texas.gov/sites/default/files/files/Applications-Forms-Publicati
 https://www.federalreserve.gov/boarddocs/supmanual/bhcpr/UsersGuide13/0313.pdf
 
 
+ <!-- ![Capitol One](images/Cap_one_provisions&_losses.png ) -->
+ <div class = 'row'>
+    <div class = 'column'>
+    <img src="images/Cap_one_provisions&_losses.png" width="250" height="200" >
+    <img src="images/JPM_provisions&_losses.png" width="250" height="200">
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">
+        <img src="images/GS_provisions&_losses.png" width="250" height="200">
+         <img src="images/citigroup_provisions&_losses.png" width="250" height="200">
+    </div>
+</div>
 
