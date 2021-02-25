@@ -9,22 +9,19 @@ from bank_data_gather import *
 
 
 def prov_net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
-
+    '''provision loan loss values for Bank_name'''
     provison_loan_losses_q2020 = dataframe.loc['BHCK4230']
     provison_loan_losses_q2019 = dataframe.loc['BHCK4230_4Q']
     provison_loan_losses_dec2019 = dataframe.loc['BHCK4230_1Y']
     provison_loan_losses_dec2018 = dataframe.loc['BHCK4230_2Y']
     provison_loan_losses_dec2017 = dataframe.loc['BHCK4230_3Y']
-
+    
+    '''net loan loss values for Bank_name'''
     net_loan_losses_sept2020 = dataframe.loc['BHSR853']
     net_loan_losses_sept2019 = dataframe.loc['BHSR853_4Q']
     net_loan_losses_dec2019 = dataframe.loc['BHSR853_1Y']
     net_loan_losses_dec2018 = dataframe.loc['BHSR853_2Y']
     net_loan_losses_dec2017 = dataframe.loc['BHSR853_3Y']
-
-
-    
-   
 
     bank_dates = make_bank_dates(quarter, year)
 
@@ -36,8 +33,6 @@ def prov_net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = '
     net_loan_losses_converted = (divide_1000(convert_bank_data_to_floatv2(net_loan_losses)))
 
     
-
-
     x = np.arange(len(bank_dates))  
     width = 0.35  
     

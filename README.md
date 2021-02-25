@@ -73,7 +73,7 @@ Income per Asset. This indicates that large assets are producing small quantitie
          <img src="images/citigroup_provisions&_losses.png" width="280" height="200">
     </div>
 </div>
-All banks dramtically raised loan loss provisions, likely in anticipation of higher rate of non-performing loans
+All banks sampled dramtically raised loan loss provisions, likely in anticipation of higher rate of non-performing loans
 
 [Figure2.0]
     <div align="center">

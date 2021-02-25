@@ -10,7 +10,7 @@ from bank_data_gather import *
 
 def net_income_func(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
 
-
+    '''net income for bank_name'''
     net_income_dec2017 = dataframe.loc['BHSR1312_3Y']
     net_income_dec2018 = dataframe.loc['BHSR1312_2Y']
     net_income_sept2019= dataframe.loc['BHSR1312_4Q']
@@ -37,7 +37,7 @@ def net_income_func(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
 
 
     fig.tight_layout()
-    fig.savefig("Citigroup_income.png", dpi=200)
+    # fig.savefig("Citigroup_income.png", dpi=200)
     plt.show()
 
 
