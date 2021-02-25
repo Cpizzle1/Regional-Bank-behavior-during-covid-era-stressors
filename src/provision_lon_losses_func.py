@@ -63,7 +63,7 @@ def prov_net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = '
     
 
     
-    fig.savefig("JPM_provisions&_losses.png", dpi=200)
+    # fig.savefig("JPM_provisions&_losses.png", dpi=200)
     plt.show()
 
 if __name__ == "__main__":
