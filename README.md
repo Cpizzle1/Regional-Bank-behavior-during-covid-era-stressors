@@ -28,14 +28,14 @@ Dramatic drop off in Net Income for 2020 Texas Captial One Bank.  Note: timepoin
 [Figure1.2]
 <div class = 'row'>
     <div class = 'column'>
-    <img src="images/Capitol_net_income.png" width="280" height="200" >
-    <img src="images/JPM_income.png" width="280" height="200">
+    <img src="images/Capitol_net_income.png" width="550" height="400" >
+    <img src="images/JPM_income.png" width="550" height="400">
     </div>
     <div class="column">
     </div>
     <div class="column">
-        <img src="images/Goldman_Sachs_income.png" width="280" height="200">
-         <img src="images/Citigroup_income.png" width="280" height="200">
+        <img src="images/Goldman_Sachs_income.png" width="550" height="400">
+         <img src="images/Citigroup_income.png" width="550" height="400">
     </div>
 </div>
 
@@ -131,19 +131,24 @@ Scrum group 1
 
 ## Sources 
 <a id="1">[1]</a> 
-[FFIEC](https://www.ffiec.gov/npw/Institution/TopHoldings)  
+[FFIEC]
+(https://www.ffiec.gov/npw/Institution/TopHoldings)  
 
 <a id="1">[2]</a> 
-[American Banker](https://www.americanbanker.com/news/fed-details-stress-test-scenarios-for-2021#:~:text=The%20Fed%20conducts%20two%20separate,do%20so%20by%20April%205)
+[American Banker]
+(https://www.americanbanker.com/news/fed-details-stress-test-scenarios-for-2021#:~:text=The%20Fed%20conducts%20two%20separate,do%20so%20by%20April%205)
 
 <a id="1">[3]</a> 
-[Texas.gov](https://www.dob.texas.gov/sites/default/files/files/Applications-Forms-Publications/Publications/Top-Banks/top0319.pdf)  
+[Texas.gov]
+(https://www.dob.texas.gov/sites/default/files/files/Applications-Forms-Publications/Publications/Top-Banks/top0319.pdf)  
 
 <a id="1">[4]</a> 
-[Fed reserve Bank Holding Company Performance Report](https://www.federalreserve.gov/boarddocs/supmanual/bhcpr/UsersGuide13/0313.pdf)
+[Fed reserve Bank Holding Company Performance Report]
+(https://www.federalreserve.gov/boarddocs/supmanual/bhcpr/UsersGuide13/0313.pdf)
 
 <a id="1">[5]</a> 
-[Fed Reserve Assessment of Bank Capital during the Recent Corona Virus Event](https://www.federalreserve.gov/publications/files/2020-sensitivity-analysis-20200625.pdf)
+[Fed Reserve Assessment of Bank Capital during the Recent Corona Virus Event]
+(https://www.federalreserve.gov/publications/files/2020-sensitivity-analysis-20200625.pdf)
 
 
  <!-- ![Capitol One](images/Cap_one_provisions&_losses.png ) -->

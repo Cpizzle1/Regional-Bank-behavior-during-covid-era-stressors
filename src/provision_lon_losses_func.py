@@ -9,6 +9,7 @@ from bank_data_gather import *
 
 
 def prov_net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
+    
     '''provision loan loss values for Bank_name'''
     provison_loan_losses_q2020 = dataframe.loc['BHCK4230']
     provison_loan_losses_q2019 = dataframe.loc['BHCK4230_4Q']
