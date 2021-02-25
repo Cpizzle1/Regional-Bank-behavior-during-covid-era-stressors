@@ -28,14 +28,14 @@ Dramatic drop off in Net Income for 2020 Texas Captial One Bank.  Note: timepoin
 [Figure1.2]
 <div class = 'row'>
     <div class = 'column'>
-    <img src="images/Capitol_net_income.png" width="550" height="400" >
-    <img src="images/JPM_income.png" width="550" height="400">
+    <img src="images/Capitol_net_income.png" width="425" height="350" >
+    <img src="images/JPM_income.png" width="425" height="350">
     </div>
     <div class="column">
     </div>
     <div class="column">
-        <img src="images/Goldman_Sachs_income.png" width="550" height="400">
-         <img src="images/Citigroup_income.png" width="550" height="400">
+        <img src="images/Goldman_Sachs_income.png" width="425" height="350">
+         <img src="images/Citigroup_income.png" width="425" height="350">
     </div>
 </div>
 
