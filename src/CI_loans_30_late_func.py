@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as stats
+import matplotlib.ticker as mtick
 from bank_data_gather import *
 
 
@@ -41,12 +42,13 @@ def CI_loans_30_late(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank
     ax.set_title('Commercial & Industrial Loans 30-89 days late', Fontsize = 24)
     ax.set_xticks(x)
     ax.set_xticklabels(bank_dates)
+    ax.yaxis.set_major_formatter(mtick.PercentFormatter())
     ax.legend()
 
     autolabel(tcbi_CI_30_90days_pastdue_ax, ax)
     autolabel(pg_CI_30_90days_pastdue_ax, ax)
 
-    # plt.savefig('CI_loans_30_89_late.png')
+    plt.savefig('CI_loans_30_89_late.png')
     plt.show()
 
 if __name__ == "__main__":

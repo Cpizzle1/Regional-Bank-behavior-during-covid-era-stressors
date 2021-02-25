@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import scipy.stats as stats
+import matplotlib.ticker as mtick
 from bank_data_gather import *
 
 
@@ -47,7 +48,7 @@ def net_loan_losses_by_type(dataframe, quarter = 'sept', year = 2020, Bank_name 
     width = 0.35  
 
     fig, ax = plt.subplots(figsize = (12, 8))
-    rects1 = ax.bar(x - width/2, total_list, width,color ='green', label=f'{Bank_name}')
+    rects1 = ax.bar(x - width/2, total_list, width, label=f'{Bank_name}')
     rects2 = ax.bar(x + width/2, converted_pg_total_asset_catagory_by_percent_sept2020, width, label='Peer Group n =130')
 
 
@@ -58,9 +59,11 @@ def net_loan_losses_by_type(dataframe, quarter = 'sept', year = 2020, Bank_name 
 
     ax.legend(fontsize= 14)
 
+    ax.yaxis.set_major_formatter(mtick.PercentFormatter())
+
     autolabel(rects1,ax)
     autolabel(rects2, ax)
-    fig.savefig("net_losses_by_type_JPM_CI.png", dpi=200)
+    fig.savefig("net_CI_loan_lo.png", dpi=200)
 
     plt.show()
     
@@ -74,6 +77,7 @@ if __name__ == "__main__":
     
 
     jpm = pd.read_csv("~/data/JPM_sept2020.csv", index_col='ItemName')
-    # print(net_loan_losses_by_type(tcbi, quarter ='sept', Bank_name = 'TCBI'))
-    print(net_loan_losses_by_type(jpm, Bank_name ='JPM'))
+    print(net_loan_losses_by_type(tcbi, quarter ='sept', Bank_name = 'TCBI'))
+    # print(net_loan_losses_by_type(jpm, Bank_name ='JPM'))
+
     
