@@ -37,7 +37,7 @@ def net_income_func(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
 
 
     fig.tight_layout()
-    fig.savefig("Goldman_Sachs_income.png", dpi=200)
+    fig.savefig("Citigroup_income.png", dpi=200)
     plt.show()
 
 
@@ -53,7 +53,8 @@ if __name__ == "__main__":
     citi_group = pd.read_csv("~/data/Citigroup_sept2020.csv", index_col='ItemName')
     # print(net_income_func(Cap_one, 'sept', 2020, 'Capitol One'))
     # print(net_income_func(jpm, 'sept', 2020, 'JPM'))
-    print(net_income_func(GS, 'sept', 2020, 'Goldman_sachs'))
+    # print(net_income_func(GS, 'sept', 2020, 'Goldman_sachs'))
+    print(net_income_func(citi_group, 'sept', 2020, 'Citi-Group'))
   
    
 

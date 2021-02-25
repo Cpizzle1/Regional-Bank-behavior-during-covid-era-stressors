@@ -18,6 +18,19 @@ Holding companies with assets greather than $10 Billion USD are required to file
 <br>
 Dramatic drop off in Net Income for 2020 
 
+<div class = 'row'>
+    <div class = 'column'>
+    <img src="images/Capitol_net_income.png" width="280" height="200" >
+    <img src="images/JPM_income.png" width="280" height="200">
+    </div>
+    <div class="column">
+    </div>
+    <div class="column">
+        <img src="images/Goldman_Sachs_income.png" width="280" height="200">
+         <img src="images/Citigroup_income.png" width="280" height="200">
+    </div>
+</div>
+
 [Figure1.2]
     <div align="center">
       <img src="images/TCBI_PG_assets_by_percent.png">
@@ -63,6 +76,7 @@ Income per Asset. This indicates that large assets are producing small quantitie
     </div>
 
 <br>
+Texas Capital One Bank is in 75th percentile of peer group in terms of CI ownership
 
 [Figure2.1]
     <div align="center">
