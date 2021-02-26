@@ -7,6 +7,14 @@ from bank_data_gather import *
 
 
 def net_loan_losses_by_type(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
+    """Makes a graph of net loan losses of Commerical and Industrial loans
+
+    Args:
+        dataframe ([pandas dataframe]): CSV file of BHCPR
+        quarter (str, optional): [start month of quarter of interset]. Defaults to 'sept'.
+        year (int, optional): [Year of CSV BHCPR]. Defaults to 2020.
+        Bank_name (str, optional): [Name of Bank in BHCPR file for labeling purposes]. Defaults to 'Bank'.
+    """
     
     #Net Commerical & Industrial Loan Losses
     net_losses_type_CI_sept2020 = dataframe.loc['BHSR247']
@@ -15,12 +23,7 @@ def net_loan_losses_by_type(dataframe, quarter = 'sept', year = 2020, Bank_name 
     net_losses_type_CI_dec2018 = dataframe.loc['BHSR247_2Y']
     net_losses_type_CI_dec2017 = dataframe.loc['BHSR247_3Y']
     
-   
-
-
-    
-
-#Peer group CI losses:
+    #Peer group CI losses:
     pg_net_losses_type_CI_sept2020 = dataframe.loc['PHSR247']
     pg_net_losses_type_CI_sept2019 = dataframe.loc['PHSR247_4Q']
     pg_net_losses_type_CI_dec2019 = dataframe.loc['PHSR247_1Y']
@@ -29,20 +32,13 @@ def net_loan_losses_by_type(dataframe, quarter = 'sept', year = 2020, Bank_name 
 
     bank_dates = make_bank_dates(quarter, year)
 
-    
-
     total_percent_lst = [net_losses_type_CI_dec2017,net_losses_type_CI_dec2018,net_losses_type_CI_sept2019,net_losses_type_CI_dec2019,net_losses_type_CI_sept2020]
-
 
     pg_total_asset_catagory_by_percent_sept2020 =[pg_net_losses_type_CI_dec2017,pg_net_losses_type_CI_dec2018, pg_net_losses_type_CI_sept2019,pg_net_losses_type_CI_dec2019,  pg_net_losses_type_CI_sept2020 ]
 
     total_list = (convert_bank_data_to_floatv2(total_percent_lst))
-    converted_pg_total_asset_catagory_by_percent_sept2020 = (convert_bank_data_to_floatv2(pg_total_asset_catagory_by_percent_sept2020))
-
-
     
-
-   
+    converted_pg_total_asset_catagory_by_percent_sept2020 = (convert_bank_data_to_floatv2(pg_total_asset_catagory_by_percent_sept2020))
 
     x = np.arange(len(bank_dates))  
     width = 0.35  

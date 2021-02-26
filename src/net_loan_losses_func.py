@@ -9,6 +9,14 @@ from bank_data_gather import *
 
 
 def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
+    """Makes a graph of net loan losses of a Bank from BHCPR CSV file
+
+     Args:
+        dataframe ([pandas dataframe]): CSV file of BHCPR
+        quarter (str, optional): [start month of quarter of interset]. Defaults to 'sept'.
+        year (int, optional): [Year of CSV BHCPR]. Defaults to 2020.
+        Bank_name (str, optional): [Name of Bank in BHCPR file for labeling purposes]. Defaults to 'Bank'.
+    """
 
     net_loan_losses_sept2020 = dataframe.loc['BHSR853']
     net_loan_losses_sept2019 = dataframe.loc['BHSR853_4Q']
@@ -18,7 +26,6 @@ def net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'
 
     bank_dates = make_bank_dates(quarter, year)
 
-    
     net_loan_losses = [net_loan_losses_dec2017, net_loan_losses_dec2018, net_loan_losses_sept2019, net_loan_losses_dec2019, net_loan_losses_sept2020]
 
     converted_net_income = (divide_1000(convert_bank_data_to_floatv2(net_loan_losses)))

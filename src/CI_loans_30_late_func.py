@@ -7,6 +7,19 @@ from bank_data_gather import *
 
 
 def CI_loans_30_late(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
+
+    """returns a graph of Commerical and Industrial Loans that are 30-90 days late
+    
+
+    Args:
+        dataframe ([pandas dataframe]): [CSV file of BHCPR but needs to be read in with index_col='ItemName' argument]
+        quarter (str, optional): [Month of quarter to measure ]. Defaults to 'sept'
+        year (int, optional): year of BHCPR report. Defaults to 'sept'
+        Bank_name (str, optional): [name of Bank to fill in graph and label title ]. Defaults to 'Bank'.
+    """
+   
+
+    
         
      #Bank C&I loans past due   
     CI_30_89_days_past_due_sept2020=dataframe.loc['BHSR629']

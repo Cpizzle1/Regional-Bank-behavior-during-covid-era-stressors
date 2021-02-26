@@ -6,6 +6,14 @@ from bank_data_gather import *
 
 
 def assets_by_percent(dataframe, Bank_name = 'Bank'):
+    """ takes in a pandas dataframe and returns a graph of major loan percentages in 
+    Real Estate, Comm&Industrial , Individ, Other, Bank balances, Securities>1year, All Other
+    and saves PNG file as TCBI_PG_assets_by_percent.png
+
+    Args:
+        dataframe ([pandas dataframe]): [CSV file of BHCPR but needs to be read in with index_col='ItemName' argument]
+        Bank_name([String]): Defaults to 'Bank': name of Bank for title and graph purposes
+    """
     #bank assets
     percent_asset_real_estate_loan_sept2020 = dataframe.loc['BHSR112']
     percent_asset_commercial_industrial_loan_sept2020 = dataframe.loc['BHSR113']

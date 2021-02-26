@@ -9,8 +9,16 @@ from bank_data_gather import *
 
 
 def prov_net_loan_losses(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
+    """ Makes a graph of provision of loan losses and net loan losses of a Bank from BHCPR CSV file
+
+     Args:
+        dataframe ([pandas dataframe]): CSV file of BHCPR
+        quarter (str, optional): [start month of quarter of interset]. Defaults to 'sept'.
+        year (int, optional): [Year of CSV BHCPR]. Defaults to 2020.
+        Bank_name (str, optional): [Name of Bank in BHCPR file for labeling purposes]. Defaults to 'Bank'.
+    """
     
-    '''provision loan loss values for Bank_name'''
+    
     provison_loan_losses_q2020 = dataframe.loc['BHCK4230']
     provison_loan_losses_q2019 = dataframe.loc['BHCK4230_4Q']
     provison_loan_losses_dec2019 = dataframe.loc['BHCK4230_1Y']

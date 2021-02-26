@@ -69,7 +69,7 @@ Income per Asset. This indicates that assets are producing small quantities of i
 
 <br>
 
-TCBI has increased their provisions for loan losses by 3x vs the same time point in Sept 2019, and their net loan losses are currently close to 2x.
+TCBI has increased their provisions for loan losses by 3x vs the same time point in Sept 2019, and their net loan losses are currently close to 2x. If loan losses continue to grow, this metric might be a good indicator of Bank Health.
 
 [Figure1.6]
 

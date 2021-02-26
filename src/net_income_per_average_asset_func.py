@@ -6,6 +6,16 @@ from bank_data_gather import *
 
 
 def net_income_per_average_asset(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
+
+    """
+    Returns graph of net income per average asset, with bank dates specified
+
+    Args:
+        dataframe ([pandas dataframe]): [CSV file of BHCPR but needs to be read in with index_col='ItemName' argument]
+        quarter (str, optional): [Month of quarter to measure ]. Defaults to 'sept'
+        year (int, optional): year of BHCPR report. Defaults to 'sept'
+        Bank_name (str, optional): [name of Bank to fill in graph and label title ]. Defaults to 'Bank'.
+    """
         
      # Net interest income on a taxable equivalent basis divided by average assets.   
     net_income_per_avg_asset_sept2020= dataframe.loc['BHSR023']

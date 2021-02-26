@@ -10,7 +10,16 @@ from bank_data_gather import *
 
 def net_income_func(dataframe, quarter = 'sept', year = 2020, Bank_name = 'Bank'):
 
-    '''net income for bank_name'''
+    """
+        Returns a graph of the net income of BCHPR bank file with bank dates pass into argument
+
+        Args:
+        dataframe ([pandas dataframe]): [CSV file of BHCPR but needs to be read in with index_col='ItemName' argument]
+        quarter (str, optional): [Month of quarter to measure ]. Defaults to 'sept'
+        year (int, optional): year of BHCPR report. Defaults to 'sept'
+        Bank_name (str, optional): [name of Bank to fill in graph and label title ]. Defaults to 'Bank'.
+
+    """
     net_income_dec2017 = dataframe.loc['BHSR1312_3Y']
     net_income_dec2018 = dataframe.loc['BHSR1312_2Y']
     net_income_sept2019= dataframe.loc['BHSR1312_4Q']
