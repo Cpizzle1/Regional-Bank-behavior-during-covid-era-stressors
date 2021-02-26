@@ -1,4 +1,11 @@
-# capstone 1
+<div align="center">
+      <img src="images/covid-image.png" width="800" height="180">
+    </div>
+
+<br>
+
+# Regional Bank behavior in Texas with response to Covid Era Stressors
+
 
 ## Introduction 
 The recent Covid crisis has not only created a health crisis, but also an economic one. Rising unemployment and concurrent supply and demand shocks has put a strain on the US economy and financial system. The US Federal Reserve periodically does stress testing on banks twice a year to ensure their stability largely in part due to the 2008 crisis. Regional banks with holdings 100 billion to 250 billion have been given an exemption for the 2021 year<sup>2</sup>.  
@@ -145,6 +152,8 @@ Scrum group 1
 <a id="1">[5]</a> 
 [Fed Reserve Assessment of Bank Capital during the Recent Corona Virus Event](https://www.federalreserve.gov/publications/files/2020-sensitivity-analysis-20200625.pdf)
 
+<a id="1">[6]</a> 
+[Covid-Texas-Banner-image](https://tdem.texas.gov/covid-19/) 
 
  <!-- ![Capitol One](images/Cap_one_provisions&_losses.png ) -->
  
