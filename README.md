@@ -13,7 +13,7 @@ The recent Covid crisis has not only created a health crisis, but also an econom
 The goal of this study is to examine the filings of Texas Capital One Bank (TCBI) and its quarterly/annual filings in an effort to understand their current stress levels and weaknesses.  Texas Capital One Bank was chosen because of its location.  Due to the shale industry in the permian basin being particularly affected by Covid, and more recently a weather freeze incapacitating a large portion of Texas' energy grid, a close examination of one of the largest banks in Texas was chosen. 
 
 ## Methods
-Holding companies with assets greather than $10 Billion USD are required to file reports with the US Federal Reserve and those reports are posted quarterly on the [Federal Financial Institutions Examination Council](https://www.ffiec.gov/)  Data cleaning and graphing functions were done on the csv file posted on the FFIEC website with code found in SRC folder of the corresponding bank. With the guidance of the [Fed reserve Bank Holding Company Performance Report User guide](https://www.federalreserve.gov/boarddocs/supmanual/bhcpr/UsersGuide13/0313.pdf).  Comparison peer group are Banks with colsolidated assets equal to or great than $10 Billion (USD) with an n = 130.
+Holding companies with assets greather than $1 Billion USD are required to file reports with the US Federal Reserve<sup>4</sup> and those reports are posted quarterly on the [Federal Financial Institutions Examination Council](https://www.ffiec.gov/) . Data cleaning and graphing functions were done on the csv file posted on the FFIEC website with code found in SRC folder of the corresponding bank with the guidance of the [Fed reserve Bank Holding Company Performance Report User guide](https://www.federalreserve.gov/boarddocs/supmanual/bhcpr/UsersGuide13/0313.pdf).  Comparison peer group are Banks with colsolidated assets equal to or great than $10 Billion (USD) with an n = 130.
 
 ## Results
 
@@ -121,9 +121,9 @@ A potential side effect of openly available toolset of bank analysis tools is th
   
 
 ## Future Directions
-Ideally, a more comprehensive test and analysis of the filings would be made.  Also, I would like to automate the inputs to only have the csv file read in and the current quarter date as inputs and have the scripts run and return graphs and alaysis to make scalability and portability to other banks better.
+Ideally, a more comprehensive test and analysis of the filings would be made.  Also, I would like to automate the inputs to only have the csv file read in and the current quarter date as inputs and have the scripts run and return graphs and analysis to make scalability and portability to other banks better.
 
-Also, on the macro-economic question... Most banks seemed to have dramatically increased their loan loss provisions.  What allocations were they taken from, Who did not receive those loans, and with all the debt payment moritoriums, who is holding the bag?
+Also, on the macro-economic question... Most banks seemed to have dramatically increased their loan loss provisions.  What allocations were they taken from, who did not receive those loans, and with all the debt payment moritoriums, who is holding the bag?
 
 ## Acknowledgements
 DSI Denver Immersive staff/cohort  
